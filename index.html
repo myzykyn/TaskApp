@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi App de Tareas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>  
+    <div class="sidebar">
+    <h2 id="menu-title">Task App</h2>
+    <ul>
+        <li onclick="mostrarPagina('tareas')">📝 Lista de Tareas</li>
+        <li onclick="mostrarPagina('config')">⚙️ Configuración</li>
+        <li onclick="mostrarPagina('acerca')">ℹ️ Acerca de</li>
+    </ul>
+    </div>
+
+  <div class="main-content">
+    <!-- Página: Lista de Tareas -->
+    <div id="pagina-tareas" class="pagina">
+      <div class="input-container">
+        <input type="text" id="nuevaTarea" placeholder="Escribe una tarea..." />
+        <button onclick="agregarTarea()">Agregar</button>
+      </div>
+      <ul id="listaTareas"></ul>
+    </div>
+
+    <!-- Página: Configuración -->
+    <div id="pagina-config" class="pagina oculto">
+      <h1>Configuración</h1>
+      <p>Aquí puedes poner configuraciones futuras.</p>
+    </div>
+
+    <!-- Página: Acerca de -->
+    <div id="pagina-acerca" class="pagina oculto">
+      <h1>Acerca de</h1>
+      <p>Esta es una app de tareas hecha con JavaScript, HTML y CSS.</p>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

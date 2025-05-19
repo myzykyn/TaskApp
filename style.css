@@ -1,0 +1,123 @@
+/* Layout general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 220px;
+  background-color: #fbfbfb;
+  color: rgb(54, 53, 53);
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar li:hover {
+  background-color: #f4f4f4;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#menu-title{
+    margin-left: 32px;
+    margin-top: 5px;
+}
+
+.sidebar.cerrado {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar {
+  transition: transform 0.3s ease;
+}
+
+/* Contenido principal */
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  background-color: #f4f4f4;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar.cerrado + .main-content{
+    margin-left: 0;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 5px;
+}
+
+.tarea-texto {
+  flex: 1;
+}
+
+li button {
+  margin-left: 10px;
+}
+
+/* Ocultar páginas */
+.oculto {
+  display: none;
+}
