@@ -29,7 +29,14 @@ function agregarTarea() {
   span.contentEditable = true;
 
   const chkCompletado = document.createElement("input");
-  chkCompletado.type="checkbox"
+  chkCompletado.type="checkbox";
+  chkCompletado.addEventListener('change', function () {
+  if (chkCompletado.checked) {
+    console.log('✔️ El checkbox está marcado');
+  } else {
+    console.log('❌ El checkbox está desmarcado');
+  }
+});
 
   const btnEliminar = document.createElement("button");
   btnEliminar.textContent = "🗑️";
